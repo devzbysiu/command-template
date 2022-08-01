@@ -14,9 +14,14 @@ readonly TARGET_BINARY_PATH=/home/pi/cmdhub/commands/{{project-name}}
 
 cd ../rutils
 cargo clean
-cd -
+cd ../cmdhub
 cargo clean
-docker buildx build --build-context rutils=../rutils . -t armv7-unknown-linux-gnueabihf:custom
+cd ../{{project-name}}
+cargo clean
+docker buildx build \
+	--build-context rutils=../rutils \
+	--build-context cmdhub=../cmdhub \
+	. -t armv7-unknown-linux-gnueabihf:custom
 
 cross build --target=${TARGET_ARCH}
 rsync ${BINARY_PATH} ${TARGET_HOST}:${TARGET_BINARY_PATH}
