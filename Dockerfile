@@ -4,3 +4,4 @@ ARG REPO_ROOT="empty"
 ENV REPO_ROOT "${REPO_ROOT}"
 COPY --from=rutils . /rutils
 COPY --from=cmdhub . /cmdhub
+COPY --from=cmdhub-macros . /cmdhub-macros

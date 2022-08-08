@@ -16,11 +16,14 @@ cd ../rutils
 cargo clean
 cd ../cmdhub
 cargo clean
+cd ../cmdhub-macros
+cargo clean
 cd ../{{project-name}}
 cargo clean
 docker buildx build \
 	--build-context rutils=../rutils \
 	--build-context cmdhub=../cmdhub \
+	--build-context cmdhub=../cmdhub-macros \
 	. -t armv7-unknown-linux-gnueabihf:custom
 
 cross build --target=${TARGET_ARCH}
