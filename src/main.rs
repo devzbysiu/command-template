@@ -5,7 +5,7 @@ use rutils::file_logger::setup_logger;
 
 #[command]
 fn entry() -> Result<()> {
-    setup_logger()?;
+    let _res = setup_logger();
     info!("starting command");
     Ok(())
 }
