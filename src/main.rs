@@ -1,6 +1,7 @@
 use anyhow::Result;
 use cmdhub::register_cmd;
 use log::info;
+use rutils::file_logger::setup_logger;
 use std::env;
 use std::process::exit;
 
