@@ -25,3 +25,4 @@ docker buildx build \
 
 cross build --target=${TARGET_ARCH}
 rsync ${BINARY_PATH} ${TARGET_HOST}:${TARGET_BINARY_PATH}
+ssh pi@raspberrypi.local "${TARGET_BINARY_PATH} register"
