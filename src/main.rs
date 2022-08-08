@@ -1,4 +1,5 @@
 use anyhow::Result;
+use cmdhub::register_cmd;
 use log::info;
 use std::env;
 use std::process::exit;
