@@ -1,4 +1,5 @@
 use anyhow::Result;
+use cmdhub_macros::command;
 use log::info;
 use rutils::file_logger::setup_logger;
 
@@ -6,4 +7,5 @@ use rutils::file_logger::setup_logger;
 fn entry() -> Result<()> {
     setup_logger()?;
     info!("starting command");
+    Ok(())
 }
