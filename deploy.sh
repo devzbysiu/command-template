@@ -23,7 +23,7 @@ cargo clean
 docker buildx build \
 	--build-context rutils=../rutils \
 	--build-context cmdhub=../cmdhub \
-	--build-context cmdhub=../cmdhub-macros \
+	--build-context cmdhub-macros=../cmdhub-macros \
 	. -t armv7-unknown-linux-gnueabihf:custom
 
 cross build --target=${TARGET_ARCH}
