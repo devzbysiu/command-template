@@ -32,3 +32,4 @@ log = "0.4.17"
 anyhow = "1.0.58"
 rutils = { path = "../rutils", default-features = false, features = ["file_logger"] }
 cmdhub = { path = "../cmdhub" }
+cmdhub-macros = { path = "../cmdhub-macros" }
